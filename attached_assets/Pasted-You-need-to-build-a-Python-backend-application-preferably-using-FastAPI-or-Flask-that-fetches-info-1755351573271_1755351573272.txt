@@ -1,0 +1,128 @@
+You need to build a Python backend application (preferably using FastAPI or Flask) that fetches information (insights) from a Shopify store website (not using Shopify’s official API, but by scraping/parsing the website content).
+Your API should expose an endpoint where you give a Shopify store URL → it returns structured JSON data with all the store details.
+
+🔹 Mandatory Requirements
+
+You must fetch and organize this minimum data from the Shopify store:
+
+Whole Product Catalog
+
+All products the store sells (you can often find this in /products.json).
+
+Hero Products (Featured Products)
+
+Products listed on the homepage.
+
+Privacy Policy
+
+The legal/privacy page.
+
+Return & Refund Policies
+
+The store’s return policy page.
+
+Brand FAQs
+
+Commonly asked questions (may be listed differently across sites).
+
+Social Handles of the Brand
+
+Instagram, Facebook, TikTok, etc.
+
+Contact Details
+
+Email, phone numbers, addresses.
+
+Brand Context (About Page)
+
+Who they are, their story, etc.
+
+Important Links
+
+Order tracking, contact us, blogs.
+
+👉 You can also add more insights if you find them common across Shopify stores.
+
+🔹 API Requirements
+
+Your API should accept a website_url parameter.
+
+It should scrape/parse the site and return data as a JSON object.
+
+Handle errors:
+
+401 → if website not found.
+
+500 → if internal error occurs.
+
+🔹 References & Hints
+
+Shopify products data:
+You can often fetch products using /products.json. Example: https://shop-name.myshopify.com/products.json.
+
+Privacy Policy & FAQ may have different routes for each site → you need to handle multiple cases.
+
+Example Shopify stores:
+
+memy.co.in
+
+hairoriginals.com
+
+List of stores
+
+🔹 Bonus Section (Optional, after mandatory is done)
+
+Competitor Analysis
+
+Compare the given brand’s data with other competitor stores.
+
+Example: Number of products, types of products, etc.
+
+Database Storage
+
+Store all the fetched structured data into MySQL database.
+
+✅ What You Should Do Step by Step
+
+Setup Project
+
+Use Python + FastAPI/Flask.
+
+Create routes like /fetch_insights.
+
+Input
+
+API accepts a store website_url.
+
+Scraping & Parsing
+
+Use libraries: requests, BeautifulSoup, maybe playwright/selenium if dynamic.
+
+Try products.json for product catalog.
+
+Scrape pages for Privacy Policy, FAQ, About Us, Contact, etc.
+
+Output (JSON)
+Example:
+
+{
+  "store_name": "Hair Originals",
+  "products": [...],
+  "hero_products": [...],
+  "privacy_policy": "...",
+  "return_policy": "...",
+  "faqs": [...],
+  "social_handles": {...},
+  "contact_details": {...},
+  "brand_context": "...",
+  "important_links": [...]
+}
+
+
+Error Handling
+
+Return proper HTTP status codes if something fails.
+
+(Bonus) Save all insights into a MySQL DB.
+
+👉 In short: Build a backend API that scrapes Shopify websites and outputs structured JSON with store insights.
