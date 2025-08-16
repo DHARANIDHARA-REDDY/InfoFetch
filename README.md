@@ -1,7 +1,8 @@
 # Shopify Store InfoFetch
 
-A Flask-based web scraping application that extracts comprehensive insights from **Shopify stores** without using official APIs.  
-It provides both a **REST API** and a simple **web interface** for testing.
+A simple FastAPI-based service that extracts Brand Context information from a given Shopify store URL.
+
+The API accepts a website_url as input and returns structured JSON containing brand details.
 
 ---
 
