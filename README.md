@@ -5,7 +5,7 @@ It provides both a **REST API** and a simple **web interface** for testing.
 
 ---
 
-## 🚀 Features
+##Features
 
 - Extracts **product catalogs**, **policies**, **brand info**, and **contact details**.
 - Works without Shopify API access — uses **web scraping**.
@@ -16,9 +16,9 @@ It provides both a **REST API** and a simple **web interface** for testing.
 
 ---
 
-## 🏗️ System Architecture
+##System Architecture
 
-### Backend
+###Backend
 - **Framework**: Flask
 - **Scraping Engine**: Custom `ShopifyStoreScraper` using:
   - `requests` (with session + browser headers)
@@ -26,7 +26,7 @@ It provides both a **REST API** and a simple **web interface** for testing.
   - `trafilatura` (clean text extraction)
 - **Error Handling**: Logging, timeouts, and graceful degradation
 
-### Frontend
+###Frontend
 - **UI Framework**: Bootstrap 5 (dark theme)
 - **Templates**: Jinja2
 - **Icons**: Feather Icons
@@ -37,10 +37,10 @@ It provides both a **REST API** and a simple **web interface** for testing.
 
 ## 🔗 API Design
 
-### Endpoint
+###Endpoint
 `POST /fetch_insights`
 
-### Input
+###Input
 ```json
 {
   "url": "https://examplestore.myshopify.com"
@@ -78,7 +78,7 @@ It provides both a **REST API** and a simple **web interface** for testing.
 
 ---
 
-## ⚙️ Data Extraction Strategy
+##Data Extraction Strategy
 
 - Detects Shopify presence from HTML
 - Uses:
@@ -94,7 +94,7 @@ It provides both a **REST API** and a simple **web interface** for testing.
 
 ---
 
-## 🛡️ Error Handling & Resilience
+## Error Handling & Resilience
 
 - **Timeouts**: 10s per request  
 - **Graceful degradation**: Partial data returned if some sections fail  
@@ -103,7 +103,7 @@ It provides both a **REST API** and a simple **web interface** for testing.
 
 ---
 
-## 📦 Installation
+##Installation
 
 ### 1. Clone the repo
 ```bash
@@ -132,7 +132,7 @@ By default, the app runs at:
 
 ---
 
-## 📚 Dependencies
+##Dependencies
 
 - **Backend**
   - Flask
@@ -146,27 +146,3 @@ By default, the app runs at:
   - Feather Icons (CDN)
 
 ---
-
-## 🔮 Optional Integrations
-
-- Session management ready for **auth systems**  
-- Support for **environment variables** (config management)  
-- Easily extendable to more **data sources**  
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**.  
-
----
-
-## 🙌 Contributing
-
-Pull requests are welcome! Please open an issue first to discuss changes.
-
----
-
-## 👨‍💻 Author
-
-Developed by **[Your Name]**
