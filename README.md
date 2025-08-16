@@ -8,34 +8,21 @@ The API accepts a website_url as input and returns structured JSON containing br
 
 ##Features
 
-- Extracts **product catalogs**, **policies**, **brand info**, and **contact details**.
-- Works without Shopify API access — uses **web scraping**.
-- Provides **structured JSON output**.
-- Web interface with **Bootstrap 5 dark theme** for API testing.
-- Graceful error handling with **status codes** and logging.
-- Extensible architecture for future integrations.
+Input: Shopify store URL (e.g., https://example.myshopify.com/)
+Output: JSON Brand Context object with extracted store info
+Error handling with proper HTTP status codes:
+- 401 → Website not found / Invalid Shopify URL
+-500 → Internal server error
 
 ---
 
-##System Architecture
+## Tech Stack
 
-###Backend
-- **Framework**: Flask
-- **Scraping Engine**: Custom `ShopifyStoreScraper` using:
-  - `requests` (with session + browser headers)
-  - `BeautifulSoup4` (HTML parsing)
-  - `trafilatura` (clean text extraction)
-- **Error Handling**: Logging, timeouts, and graceful degradation
-
-###Frontend
-- **UI Framework**: Bootstrap 5 (dark theme)
-- **Templates**: Jinja2
-- **Icons**: Feather Icons
-- **JavaScript**: Vanilla JS with AJAX calls
-- **Interface**: Single-page API tester
+Python 3.10+
+FastAPI for API framework
+Requests / BeautifulSoup (for web scraping store metadata)
 
 ---
-
 ## 🔗 API Design
 
 ###Endpoint
