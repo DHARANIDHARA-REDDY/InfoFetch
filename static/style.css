@@ -1,0 +1,145 @@
+/* Custom styles for Shopify Store Scraper API */
+
+/* Improve code readability */
+pre {
+    background-color: var(--bs-dark) !important;
+    color: var(--bs-light);
+    border: 1px solid var(--bs-border-color);
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+/* Loading spinner styling */
+.spinner-border {
+    animation-duration: 0.75s;
+}
+
+/* Card enhancements */
+.card {
+    border: 1px solid var(--bs-border-color);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.card-header {
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* Form styling improvements */
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Badge styling */
+.badge {
+    font-size: 0.75rem;
+    padding: 0.35em 0.65em;
+}
+
+/* Icon alignment */
+[data-feather] {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: -0.125em;
+}
+
+/* Navbar brand icon */
+.navbar-brand [data-feather] {
+    width: 1.25em;
+    height: 1.25em;
+}
+
+/* Results summary styling */
+#resultsSummary .row > div {
+    border-right: 1px solid var(--bs-border-color);
+}
+
+#resultsSummary .row > div:last-child {
+    border-right: none;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    #resultsSummary .row > div {
+        border-right: none;
+        border-bottom: 1px solid var(--bs-border-color);
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    #resultsSummary .row > div:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+/* JSON display improvements */
+#resultsJson {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 0.8rem;
+}
+
+/* Error alert styling */
+.alert {
+    border-left: 4px solid;
+}
+
+.alert-danger {
+    border-left-color: var(--bs-danger);
+}
+
+/* Button improvements */
+.btn {
+    border-radius: 0.375rem;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styling */
+footer {
+    margin-top: auto;
+}
+
+/* List group improvements */
+.list-group-item {
+    border-color: var(--bs-border-color);
+}
+
+/* Input group improvements */
+.input-group-text {
+    border-color: var(--bs-border-color);
+}
+
+/* Navbar improvements */
+.navbar {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Ensure proper spacing */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Code highlighting for JSON */
+.json-string { color: #98c379; }
+.json-number { color: #d19a66; }
+.json-boolean { color: #56b6c2; }
+.json-null { color: #c678dd; }
+.json-key { color: #e06c75; }
