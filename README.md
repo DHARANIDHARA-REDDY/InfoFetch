@@ -119,18 +119,3 @@ By default, the app runs at:
 👉 `http://127.0.0.1:5000`
 
 ---
-
-##Dependencies
-
-- **Backend**
-  - Flask
-  - Jinja2 (bundled with Flask)
-- **Scraping**
-  - requests
-  - BeautifulSoup4
-  - trafilatura
-- **Frontend**
-  - Bootstrap 5 (CDN)
-  - Feather Icons (CDN)
-
----
